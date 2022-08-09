@@ -1,16 +1,16 @@
 export interface Site {
-  email: string,
-  subdomain: string,
-  name: string,
-  description: string,
+  email: string
+  subdomain: string
+  name: string
+  description: string
   posts: Post[]
 }
 
 export interface Post {
-  id: number;
-  title: string,
-  description: string,
-  image: string,
+  id: number
+  title: string
+  description: string
+  image: string
   link: string
 }
 

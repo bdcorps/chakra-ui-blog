@@ -1,12 +1,12 @@
-import { Box, Center, Heading, Text } from "@chakra-ui/react";
-import { FunctionComponent } from "react";
-import AllPosts from "../components/AllPosts";
-import Layout from "../components/Layout";
-import { Site } from "../types";
-import { getSite } from "./api/sites";
+import { Box, Center, Heading, Text } from '@chakra-ui/react'
+import { FunctionComponent } from 'react'
+import AllPosts from '../components/AllPosts'
+import Layout from '../components/Layout'
+import { Site } from '../types'
+import { getSite } from './api/sites'
 
 interface SiteIndexProps {
-  site: Site;
+  site: Site
 }
 
 const SiteIndex: FunctionComponent<SiteIndexProps> = ({
@@ -23,16 +23,16 @@ const SiteIndex: FunctionComponent<SiteIndexProps> = ({
 
       <AllPosts posts={posts} />
     </Layout>
-  );
-};
-
-export async function getServerSideProps({ params }: any) {
-  const site: Site | null = await getSite();
-
-  const props: any = { site };
-  return {
-    props,
-  };
+  )
 }
 
-export default SiteIndex;
+export async function getServerSideProps({ params }: any) {
+  const site: Site | null = await getSite()
+
+  const props: any = { site }
+  return {
+    props,
+  }
+}
+
+export default SiteIndex

@@ -1,8 +1,8 @@
-import { Box, Container, Heading, Link, Text, VStack } from "@chakra-ui/react";
-import { InferGetServerSidePropsType } from "next";
-import Image from "next/image";
-import { Site } from "../../types";
-import { getSite } from "../api/sites";
+import { Box, Container, Heading, Link, Text, VStack } from '@chakra-ui/react'
+import { InferGetServerSidePropsType } from 'next'
+import Image from 'next/image'
+import { Site } from '../../types'
+import { getSite } from '../api/sites'
 
 export default function BlogItemPage({
   post,
@@ -42,17 +42,17 @@ export default function BlogItemPage({
         </Text>
       </VStack>
     </Container>
-  );
+  )
 }
 
 export async function getServerSideProps({ params }: any) {
-  const postId = Number(params.postId);
-  const site: Site | null = await getSite();
+  const postId = Number(params.postId)
+  const site: Site | null = await getSite()
 
-  const post: any = site.posts.find((post) => post.id === postId);
+  const post: any = site.posts.find((post) => post.id === postId)
 
-  const props: any = { post };
+  const props: any = { post }
   return {
     props,
-  };
+  }
 }

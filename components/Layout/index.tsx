@@ -1,9 +1,9 @@
-import { Container, VStack } from "@chakra-ui/react";
-import { FunctionComponent } from "react";
-import Header from "../Header";
+import { Container, VStack } from '@chakra-ui/react'
+import { FunctionComponent } from 'react'
+import Header from '../Header'
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
@@ -14,7 +14,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
         {children}
       </VStack>
     </Container>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

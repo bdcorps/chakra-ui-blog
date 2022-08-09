@@ -1,6 +1,6 @@
-import { Center, HStack, Link, LinkBox, LinkOverlay } from "@chakra-ui/react";
-import Image from "next/image";
-import React, { FunctionComponent } from "react";
+import { Center, HStack, Link, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import Image from 'next/image'
+import React, { FunctionComponent } from 'react'
 
 interface HeaderProps {}
 
@@ -25,7 +25,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
         </LinkOverlay>
       </LinkBox>
     </HStack>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

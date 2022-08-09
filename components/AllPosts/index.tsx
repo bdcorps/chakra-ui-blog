@@ -7,17 +7,17 @@ import {
   StackDivider,
   Text,
   VStack,
-} from "@chakra-ui/layout";
-import { useRouter } from "next/router";
-import { FunctionComponent } from "react";
-import { Post } from "../../types";
+} from '@chakra-ui/layout'
+import { useRouter } from 'next/router'
+import { FunctionComponent } from 'react'
+import { Post } from '../../types'
 
 interface PostsProps {
-  posts: Post[];
+  posts: Post[]
 }
 
 const Posts: FunctionComponent<PostsProps> = ({ posts }: PostsProps) => {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <VStack
       spacing={4}
@@ -31,7 +31,7 @@ const Posts: FunctionComponent<PostsProps> = ({ posts }: PostsProps) => {
             key={`post_${i}`}
             cursor="pointer"
             onClick={() => {
-              router.push(`/blog/${[post.id]}`);
+              router.push(`/blog/${[post.id]}`)
             }}
           >
             <HStack spacing={4} w="full" flex={7} align="flex-start">
@@ -45,14 +45,14 @@ const Posts: FunctionComponent<PostsProps> = ({ posts }: PostsProps) => {
               Read →
             </Text>
           </Flex>
-        );
+        )
       })}
     </VStack>
-  );
-};
+  )
+}
 
 interface AllPostsProps {
-  posts: Post[];
+  posts: Post[]
 }
 
 const AllPosts: FunctionComponent<AllPostsProps> = ({
@@ -70,7 +70,7 @@ const AllPosts: FunctionComponent<AllPostsProps> = ({
 
       <Posts posts={posts} />
     </VStack>
-  );
-};
+  )
+}
 
-export default AllPosts;
+export default AllPosts
