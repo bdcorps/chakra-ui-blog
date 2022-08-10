@@ -1,7 +1,7 @@
 import { Box, Container, Heading, Link, Text, VStack } from '@chakra-ui/react'
 import { InferGetServerSidePropsType } from 'next'
 import Image from 'next/image'
-import { Site } from '../../types'
+import { PostType, SiteType } from '../../types'
 import { getSite } from '../api/sites'
 
 export default function BlogItemPage({
@@ -47,9 +47,9 @@ export default function BlogItemPage({
 
 export async function getServerSideProps({ params }: any) {
   const postId = Number(params.postId)
-  const site: Site | null = await getSite()
+  const site: SiteType | null = await getSite()
 
-  const post: any = site.posts.find((post) => post.id === postId)
+  const post: any = site.posts.find((post: PostType) => post.id === postId)
 
   const props: any = { post }
   return {
