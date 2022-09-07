@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Text } from '@chakra-ui/react'
+import { Button, Center, Heading, Input, Text, VStack } from '@chakra-ui/react'
 import { FunctionComponent } from 'react'
 import AllPosts from '../components/AllPosts'
 import Layout from '../components/Layout'
@@ -14,11 +14,27 @@ const SiteIndex: FunctionComponent<SiteIndexProps> = ({
 }: SiteIndexProps) => {
   return (
     <Layout>
-      <Center height="20vh">
-        <Box>
-          <Heading fontSize="xx-large">{name}</Heading>
-          <Text align="center">{description}</Text>
-        </Box>
+      <Center height="50vh" w="full">
+        <VStack alignItems="center" spacing={4} maxW="container.sm">
+          <Text color="brand.500">Our blog</Text>
+          <Heading as="h1" fontSize="4xl">
+            {name}
+          </Heading>
+          <Text textAlign="center" color="gray.600">
+            {description}
+          </Text>
+
+          <Center w="full">
+            <Input
+              placeholder="Enter your email"
+              size="md"
+              maxW={['full', 280]}
+            />
+            <Button colorScheme="brand" ml={4}>
+              Subscribe
+            </Button>
+          </Center>
+        </VStack>
       </Center>
 
       <AllPosts posts={posts} />

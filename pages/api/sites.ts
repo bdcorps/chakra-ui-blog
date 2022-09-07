@@ -4,8 +4,8 @@ export async function getSite() {
   const site = {
     email: 'sukh@blawg.cc',
     subdomain: 'sukh',
-    name: 'Sukhpal Saini',
-    description: 'Full Stack Dev at XYZ',
+    name: 'Thoughts & Interviews',
+    description: 'Subscribe to learn about new product features, the latest in technology, solutions, and updates.',
     posts: [
       {
         id: 1,
