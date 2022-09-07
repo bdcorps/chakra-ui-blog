@@ -11,10 +11,10 @@ import {
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { FunctionComponent } from 'react'
-import { Post } from '../../types'
+import { PostType } from '../../types'
 
 interface PostsProps {
-  posts: Post[]
+  posts: PostType[]
 }
 
 const Posts: FunctionComponent<PostsProps> = ({ posts }: PostsProps) => {
@@ -112,7 +112,7 @@ const Posts: FunctionComponent<PostsProps> = ({ posts }: PostsProps) => {
 // }
 
 interface AllPostsProps {
-  posts: Post[]
+  posts: PostType[]
 }
 
 const AllPosts: FunctionComponent<AllPostsProps> = ({

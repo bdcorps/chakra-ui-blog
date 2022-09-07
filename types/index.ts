@@ -1,12 +1,11 @@
-export interface Site {
-  email: string
-  subdomain: string
+export interface SiteType {
   name: string
   description: string
-  posts: Post[]
+  logo: string
+  posts: PostType[]
 }
 
-export interface Post {
+export interface PostType {
   id: number
   title: string
   description: string
@@ -14,6 +13,6 @@ export interface Post {
   link: string
 }
 
-export interface Data {
+export interface DataType {
   name: string
 }
