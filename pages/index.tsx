@@ -1,7 +1,16 @@
-import { Button, Center, Heading, Input, Text, VStack } from '@chakra-ui/react'
+import {
+  Button,
+  Center,
+  Grid,
+  GridItem,
+  Heading,
+  Input,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 import { NextSeo } from 'next-seo'
 import { FunctionComponent } from 'react'
-import AllPosts from '../components/AllPosts'
+import AllPosts, { Post } from '../components/AllPosts'
 import Layout from '../components/Layout'
 import { SiteType } from '../types'
 import { getSite } from './api/sites'
@@ -43,6 +52,29 @@ const SiteIndex: FunctionComponent<SiteIndexProps> = ({
             </Center>
           </VStack>
         </Center>
+
+        <VStack spacing={4} w="full" align="flex-start">
+          <Text fontSize="xl" fontWeight={600}>
+            Featured Posts
+          </Text>
+
+          <Grid
+            templateRows="repeat(2, 1fr)"
+            templateColumns="repeat(5, 1fr)"
+            gap={4}
+            w="full"
+          >
+            <GridItem rowSpan={2} colSpan={1}>
+              <Post post={posts[0]} />
+            </GridItem>
+            <GridItem rowSpan={2} colSpan={2}>
+              <Post post={posts[0]} />
+            </GridItem>
+            <GridItem rowSpan={2} colSpan={2}>
+              <Post post={posts[0]} />
+            </GridItem>
+          </Grid>
+        </VStack>
 
         <AllPosts posts={posts} />
       </Layout>
