@@ -7,7 +7,9 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
+const AppLayout: FunctionComponent<LayoutProps> = ({
+  children,
+}: LayoutProps) => {
   return (
     <Container maxW="container.xl">
       <VStack spacing={10} w="full" align="center">
@@ -19,4 +21,4 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
   )
 }
 
-export default Layout
+export default AppLayout

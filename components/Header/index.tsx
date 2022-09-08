@@ -1,10 +1,10 @@
 import { Center, HStack, Link, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import Image from 'next/image'
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 
 interface HeaderProps {}
 
-const Header: FunctionComponent<HeaderProps> = () => {
+const AppHeader: FunctionComponent<HeaderProps> = () => {
   return (
     <HStack py={2} spacing={6} align="center" w="full">
       <HStack spacing={2} w="full">
@@ -28,4 +28,4 @@ const Header: FunctionComponent<HeaderProps> = () => {
   )
 }
 
-export default Header
+export default AppHeader

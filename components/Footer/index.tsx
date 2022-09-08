@@ -12,7 +12,7 @@ interface FooterProps {
   name: string
 }
 
-export const Footer: FunctionComponent<FooterProps> = ({
+export const AppFooter: FunctionComponent<FooterProps> = ({
   name,
 }: FooterProps) => {
   return (

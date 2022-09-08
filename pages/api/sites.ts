@@ -13,7 +13,7 @@ export function getSite(): SiteType {
           'Building a Subscription System using Stripe, Node.js, and MongoDB - Part 1: Recurring Payments',
         description:
           'We will create a subscription system that will let our users pay for a monthly plan using Stripe Checkout.',
-        image: 'https://google.com',
+        image: '/twitter.svg',
         link: 'https://www.saasbase.dev/subscription-payments-1-adding-basic-and-pro-subscription-plans-using-stripe/',
       },
       {
@@ -22,7 +22,7 @@ export function getSite(): SiteType {
           'Authentication System using Passport.js, Node.js, and MongoDB - Part 1: Google Login',
         description:
           'We will create an authentication system that will let our users log in using Google Sign-In.',
-        image: 'https://google.com',
+        image: '/twitter.svg',
         link: 'https://www.saasbase.dev/building-an-authentication-system-using-passport-js-node-js-and-mongodb-part-1-google-login/',
       }]
   }
