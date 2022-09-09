@@ -2,7 +2,7 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { withProse } from '@nikolovlazar/chakra-ui-prose'
 import type { AppProps } from 'next/app'
-import './theme.css'
+// import './theme.css'
 
 const theme = extendTheme(
   {
