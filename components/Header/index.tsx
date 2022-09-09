@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react'
 
 interface HeaderProps {}
 
-const AppHeader: FunctionComponent<HeaderProps> = () => {
+const Header: FunctionComponent<HeaderProps> = () => {
   return (
     <HStack py={2} spacing={6} align="center" w="full">
       <HStack spacing={2} w="full">
@@ -28,4 +28,4 @@ const AppHeader: FunctionComponent<HeaderProps> = () => {
   )
 }
 
-export default AppHeader
+export default Header

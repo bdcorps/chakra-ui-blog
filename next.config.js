@@ -4,4 +4,5 @@ module.exports = {
     defaultLocale: "en",
   },
   reactStrictMode: true,
+  images: { domains: ["og-image.vercel.app"] }
 }

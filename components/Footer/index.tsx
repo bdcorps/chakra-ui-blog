@@ -12,9 +12,7 @@ interface FooterProps {
   name: string
 }
 
-export const AppFooter: FunctionComponent<FooterProps> = ({
-  name,
-}: FooterProps) => {
+const Footer: FunctionComponent<FooterProps> = ({ name }: FooterProps) => {
   return (
     <Box id="footer" w="full">
       <Divider />
@@ -35,3 +33,5 @@ export const AppFooter: FunctionComponent<FooterProps> = ({
     </Box>
   )
 }
+
+export default Footer
